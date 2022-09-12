@@ -3,7 +3,8 @@ const materiasBase = ["Ingles", "Química", "Física", "Historia", "Mecánica"];
 
 function mostrarCoincidencias(){
     console.log("click on button");
-    //console.log(obtenerMaterias());
+    console.log(obtenerMaterias());
+    console.log(buscaCoincidencias( obtenerMaterias(), materiasBase));
     alert("Coincidencias: " +  buscaCoincidencias( obtenerMaterias(), materiasBase))
 }
 
@@ -13,5 +14,5 @@ function buscaCoincidencias(materias, materiasBase){
 
 function obtenerMaterias(){
     const inputs = document.getElementById("materias").value;
-    return inputs.replace(" ","").split(",");
+    return inputs.replace(/ /g,"").split(",");
 }
